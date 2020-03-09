@@ -104,10 +104,10 @@ const Actividad3_base = ({staticContext, ...props}) => {
                     <Olist className="list">
                         <h3>STUDENT 1</h3>
                         <h4>Wednesday</h4>
-                        <Item>8:00 to 10:00 a.m<InputWords changeCheck={checkAnswer} idArr={0} ok={okInput0} err={errInput0} />.</Item>
-                        <Item>2:00 to 4:00 p.m<InputWords changeCheck={checkAnswer} idArr={1} ok={okInput1} err={errInput1} />.</Item>
+                        <Item>8:00 to 10:00 a.m<InputWords changeCheck={checkAnswer} idArr={0} ok={okInput0} err={errInput0} /></Item>
+                        <Item>2:00 to 4:00 p.m<InputWords changeCheck={checkAnswer} idArr={1} ok={okInput1} err={errInput1} /></Item>
                         <h4>Friday</h4>
-                        <Item>3:00 to 5:00 p.m<InputWords changeCheck={checkAnswer} idArr={2} ok={okInput2} err={errInput2} />.</Item>
+                        <Item>3:00 to 5:00 p.m<InputWords changeCheck={checkAnswer} idArr={2} ok={okInput2} err={errInput2} /></Item>
                         
                     </Olist>
 
@@ -116,19 +116,19 @@ const Actividad3_base = ({staticContext, ...props}) => {
                 <Olist> 
                         <h3>STUDENT 2</h3>
                         <h4>Tuesday</h4>
-                        <Item>10:00 to 12:00 p.m<InputWords changeCheck={checkAnswer} idArr={3} ok={okInput3} err={errInput3} />.</Item>
+                        <Item>10:00 to 12:00 p.m<InputWords changeCheck={checkAnswer} idArr={3} ok={okInput3} err={errInput3} /></Item>
                         <h4>Wednesday</h4>
-                        <Item>8:00 to 11:00 a.m<InputWords changeCheck={checkAnswer} idArr={4} ok={okInput4} err={errInput4} />.</Item>
+                        <Item>8:00 to 11:00 a.m<InputWords changeCheck={checkAnswer} idArr={4} ok={okInput4} err={errInput4} /></Item>
                     </Olist>
                 </ICol>
                 <ICol py={1.5} w={25}>
                 <Olist>
                         <h3>STUDENT 3</h3>
                         <h4>Tuesday</h4>
-                        <Item>7:00 to 9:00 a.m<InputWords changeCheck={checkAnswer} idArr={5}  ok={okInput5} err={errInput5} />.</Item>
-                        <Item>10:00 to 12:00 p.m<InputWords changeCheck={checkAnswer} idArr={6}  ok={okInput6} err={errInput6} />.</Item>
+                        <Item>7:00 to 9:00 a.m<InputWords changeCheck={checkAnswer} idArr={5}  ok={okInput5} err={errInput5} /></Item>
+                        <Item>10:00 to 12:00 p.m<InputWords changeCheck={checkAnswer} idArr={6}  ok={okInput6} err={errInput6} /></Item>
                         <h4>Thursday</h4>
-                        <Item>2:00 to 4:00 p.m<InputWords changeCheck={checkAnswer} idArr={7} ok={okInput7} err={errInput7} />.</Item>
+                        <Item>2:00 to 4:00 p.m<InputWords changeCheck={checkAnswer} idArr={7} ok={okInput7} err={errInput7} /></Item>
                         
                     </Olist>
                 </ICol>

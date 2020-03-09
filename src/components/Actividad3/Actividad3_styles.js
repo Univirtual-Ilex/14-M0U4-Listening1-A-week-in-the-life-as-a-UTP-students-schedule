@@ -22,7 +22,7 @@ h3{
     color: #666666;
 }
 .btn-check{
-    margin-top:-3.2em;
+    margin-top:-3.6em;
 }
 .list{
     list-style: none;
@@ -42,8 +42,8 @@ export const Item = styled.li`
     font-weight:normal;
     list-style: none;
     list-style-type: none;
-    padding:0;
-    margin:0.2em 0;
+    padding:0.5em;
+    margin:0.5em 0;
 `
 export const UiButtonsContainer = styled.div`
     width:6.5em;

@@ -24,6 +24,13 @@ button{
         color:#fff;
         border:2px solid #fff;
     }
+    a{
+        display: block;
+        text-decoration: none;
+        &:link, &:active{
+            color: #fff;
+        }
+    }
 }
 
 `

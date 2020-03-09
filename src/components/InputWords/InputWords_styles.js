@@ -4,7 +4,7 @@ import Ilex from '../../App/variables'
 const styles = css`
 display: inline-block;
 margin: ${props => props.m || 0}em;
-width:${props => props.w ? props.w+'em' : '100%'};
+width:80%
 .input-words {
     padding: ${props => props.p || 0 + 'em'};
 }

@@ -44,6 +44,7 @@ const mistyles = css`
 }
 .next{
     margin-top: -3.25em;
+    text-decoration: none;
 }
 h2{
     margin-bottom: 1.5em;
@@ -72,6 +73,14 @@ h2{
     margin-top: 0.5em;
     margin-bottom: 0.5em;
 }
+link{
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+        color: #FFFF;
+    }
+}
+
 `
 
 export const DraggablesContainer = styled.div`
