@@ -1,35 +1,70 @@
-
 //Import
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
-//Components
+import styles from './Draggable_styles'
 import BocinaButton from '../BocinaButton'
-import styles, {draggableBlock, draggableItemb, draggableClean} from './Draggable_styles'
-// import BocinaButton from '../BocinaButton'
-
-export const DraggableBlock = styled.div`
-    ${draggableBlock}
-`
-
-export const DraggableClean = styled.div`
-    ${draggableClean}
-`
+import { gsap, TweenMax } from 'gsap'
+import { Draggable} from 'gsap/Draggable'
 
 // Componente base
-const Draggable_base = ({audio, name, ...props }) => {
+// Es un draggable con drop target
+// PROPS
+/**
+ * areaDrag: #id del elemento que se va a usar como contenedor importante usar el #
+ * audio: String url de la locación del audio
+ * text: Contenido del texto del elemento arrastrable. No usa propchildren
+ * target: #id del elemento al que va a apuntar
+ * elementId: es un identificador que funciona para definir la identidad de cada instancia
+ * // Base
+ * ref: Recibe la referencia o el conjunto de referencias html del elemento al que apuntará como droppable
+ */
+
+const Draggable_base = React.forwardRef(({visible, areaDrag, text, target, elementId, checkFunction, id, setChecked, ...props }, ref ) => {
+    const itemDraggable = useRef()
+    useEffect ( () => {
+
+        gsap.registerPlugin(Draggable)
+        Draggable.create( itemDraggable.current , { 
+            type: 'x,y',
+            edgeResistance:0.65,
+            bounds:areaDrag,
+            throwProps:true,
+            zIndex:500,
+            // liveSnap: { points:[{x:100, y:100}], radius: 50}, // {x:100, y:100}, {x:50, y:50}, {x:100, y:100} Puntos en la posición 0x y 0y tambien en la 50x y 50y
+            inertia:true,
+            onDragEnd: function (e) {
+                ref.forEach(item => {
+                    if(item.current.id === target) {
+                        console.log(ref)
+                        if (!this.hitTest(item.current)) {
+                            TweenMax.to(this.target, 0.2, {x:0, y:0})
+                            setChecked(id, 0)
+                        } else {
+                            setChecked(id, 1)
+                        }
+                        
+                        console.log('Area x:', item.current.offsetLeft, 'Area y: ', item.current.offsetTop)
+                        
+                        return item
+                    }
+                })
+            }
+        })
+    } , [areaDrag, target, ref, elementId, checkFunction, visible])
+
+
     return (
-        <div {...props}>
-            <span>{ name }</span>
+        <div {...props} ref={itemDraggable}>
+            <div className='draggable' >
+            
+                <span>{ text }</span>
+            </div>
+
         </div>
+        
     )
-}
-const Draggable = styled(Draggable_base)`${ styles }`
+})
 
+const DraggableItem = styled(Draggable_base)`${ styles }`
 
-export const DraggableItemb =styled(Draggable)`
-    ${draggableItemb}
-
-`
-
-
-export default Draggable
+export default DraggableItem

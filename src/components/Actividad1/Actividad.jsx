@@ -29,7 +29,7 @@ import { Item } from '../Actividad3/Actividad3_styles'
 
 
 
-const Actividad_base =  ({...props}) => {
+const Actividad_base =  ({staticContext, ...props}) => {
     const [tooltipVisible, settooltipVisible] = useState(false)
     const [tooltip2Visible, settooltip2Visible] = useState(false)
 
@@ -62,10 +62,10 @@ const Actividad_base =  ({...props}) => {
                     </IRow>
                 <IRow justify='center' align='center' w={100} gutters={0.5}>
 
-                       <div className="btn-listening" onClick={()=>settooltipVisible(!tooltipVisible)}>
+                       <div className="btn-listening" onClick={() => settooltipVisible(!tooltipVisible)}>
                            <img src="./src/listen1.png"/>
                        </div>
-                       <Tooltip visible={tooltipVisible} cerrarbtn={()=>settooltipVisible(!tooltipVisible)} className="Tooltip">
+                       <Tooltip visible={tooltipVisible} cerrarbtn={() => settooltipVisible(!tooltipVisible)} className="Tooltip">
                                <h2>REMEMBER ORDINAL NUMBERS</h2>
                                { tools.map((item, index) => {
                                    return(
@@ -88,10 +88,10 @@ const Actividad_base =  ({...props}) => {
                                })                                   
                                }
                            </Tooltip>
-                       <div className="btn-listening" onClick={()=>settooltip2Visible(!tooltip2Visible)}>
+                       <div className="btn-listening" onClick={() => settooltip2Visible(!tooltip2Visible)}>
                            <img src="./src/listen2.png"/>
                        </div>
-                       <Tooltip visible={tooltip2Visible} cerrarbtn={()=>settooltip2Visible(!tooltip2Visible)}>
+                       <Tooltip visible={tooltip2Visible} cerrarbtn={() => settooltip2Visible(!tooltip2Visible)}>
                                <h2>PRACTICE UTP'S PROGRAMS</h2>
                                <IRow className="tools-container">
                                { tools1.map((item, index) => {
@@ -120,7 +120,7 @@ const Actividad_base =  ({...props}) => {
                 </IRow>
                 </ICol>
             </IRow>
-            <ButtonCheck className="next">NEXT</ButtonCheck>          
+            <ButtonCheck link={'/actividad2'} className="next" text={'NEXT'} />          
         </Container>
         
     )
