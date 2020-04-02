@@ -90,7 +90,7 @@ const Actividad3_base = ({staticContext, ...props}) => {
         <Container {...props} bgImage='./src/bg_actividad1.png' w={70} h={42}>
             <UiButtonsContainer>
                 <ButtonUi icon='ilx-ayuda' tooltip='Complete the boxes with the subjects of each student in their their corresponding  schedule ' />
-                <ButtonUi icon='ilx-volver' tooltip='Start Again' onClick={ () => {window.location.href = '/actividad1'} } />
+                <ButtonUi icon='ilx-volver' tooltip='Start Again' onClick={() => window.location.reload()} />
             </UiButtonsContainer>
 
             <div className='container-content'>
@@ -146,7 +146,7 @@ const Actividad3_base = ({staticContext, ...props}) => {
                 </ICol>
             </IRow>
             <ButtonCheck onClick={checkActivity} className="btn-check" text={'CHECK'} />
-            <Modal visible={modalFlag} ok={ok} err={err} w={25} repeatUrl={'/actividad3'} finished={ok} />
+            <Modal visible={modalFlag} ok={ok} err={err} w={25} repeatUrl={'#/actividad3'} finished={ok} />
         </Container>
 
     )
