@@ -73,7 +73,7 @@ const Actividad_base = ({staticContext, ...props}) => {
             
             <UiButtonsContainer>
                 <ButtonUi icon='ilx-ayuda' tooltip='Move student information to their respective category and order' />
-                <ButtonUi icon='ilx-volver' tooltip='Start Again' onClick={ () => {window.location.href = '/actividad1'} } />
+                <ButtonUi icon='ilx-volver' tooltip='Start Again' onClick={() => window.location.reload()} />
             </UiButtonsContainer>
             <div className="Main">
                 <MainTitle color={Ilex.violeta2} pt={10}>
@@ -127,7 +127,7 @@ const Actividad_base = ({staticContext, ...props}) => {
                 </Area>
             </AreasContainer>
 
-            <Modal visible={modalFlag} ok={ok} err={err} w={25} repeatUrl={'/actividad2'} nxtUrl={'/actividad3'} />
+            <Modal visible={modalFlag} ok={ok} err={err} w={25} repeatUrl={'#/actividad2'} nxtUrl={'#/actividad3'} />
                         
             <ButtonCheck onClick={comprobarPrueba} className="next" text={'NEXT'} />
 
