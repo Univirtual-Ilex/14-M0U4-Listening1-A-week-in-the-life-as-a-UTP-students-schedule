@@ -15,7 +15,7 @@ const tools1 = [
     "id": 3,
     "title": "BASIC SCIENCES SCHOOL",
     "audio": "./media/basic-sciences-school.mp3",
-    "programs": [ "Bachelor's degree un Math and Physics" ] 
+    "programs": [ "Bachelor's degree in Math and Physics" ] 
     
 },
 {

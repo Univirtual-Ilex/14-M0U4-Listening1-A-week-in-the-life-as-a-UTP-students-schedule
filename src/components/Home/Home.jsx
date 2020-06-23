@@ -15,8 +15,8 @@ const Home_base = function ({...props}) { // se le pasan las props para recibir 
                         <div className='bloque-izquierdo-container'>
                             <h1> A week in the life as a UTP student </h1>
                             <p>
-                            This activity count with 2 parts, you must pass each exercise to finish
-                            <span className='negrilla'> <br/> <br/> ¡Time to practice your listening skill!</span></p>
+                            This activity count in 2 parts, you must pass each exercise to finish
+                            <span className='negrilla'> <br/> <br/> Time to practice your listening skill!</span></p>
                             <ButtonLink to='/actividad1'>Start</ButtonLink>
                         </div>
                     </div>
